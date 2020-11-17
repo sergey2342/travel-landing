@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="address" content="address">
+    <meta name="keywords" content="keywords">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="og:image" content="url">
+
+    <link rel="shortcut icon" href="url" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Тайланд</title>
+</head>
+<body>
+
+    <div class="header-menu">
+        <i class="fas fa-times hamburger-icon-hide"></i>
+        <div class="header-menu-list">
+            <div class="header-menu-list-item item-logo">LOGO</div>
+            <div class="header-menu-list-item">home</div>
+            <div class="header-menu-list-item">experiences</div>
+            <div class="header-menu-list-item">questions</div>
+            <div class="header-menu-list-item">contact</div>
+        </div>
+    </div>
+
+    <i class="fas fa-bars hamburger-icon-show"></i>
+
+    <script>
+        const hamburgerShow = document.querySelector('.hamburger-icon-show'),
+              hamburgerHide = document.querySelector('.hamburger-icon-hide'),
+              menu = document.querySelector('.header-menu'),
+              toggleAttribute = (attr, overflow) => {menu.setAttribute('area-hidden', attr); document.body.style.overflow = overflow},
+              toggleIconHide = () => {
+                  if(window.innerWidth > 799) {
+                    hamburgerHide.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                  } else {
+                      hamburgerHide.style.display = 'block';
+                      menu.getAttribute('area-hidden') === 'show' ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto';
+                  }
+                };
+        
+        window.addEventListener('resize', () => toggleIconHide());
+        hamburgerShow.addEventListener('click', () => toggleAttribute('show', 'hidden'));
+        hamburgerHide.addEventListener('click', () => {
+            toggleAttribute('hide', 'auto');
+            setTimeout(() => menu.removeAttribute('area-hidden'), 600);
+        });        
+    </script>
+
+    <div class="header-bac">
+        <div class="header-bac-title">enjoy freedom land</div>
+        <img class="header-bac-img" src="img/header-bg.jpg" alt="">
+    </div>
+
+    <div class="main-title">See latest vacation ideas</div>
+
+    <div class="vacation-wrapper">
+        <div class="vacation-wrapper-item">
+            <img src="img/vacation1.jpg" alt="">
+            <div class="vacation-wrapper-item-bg"></div>
+            <div class="vacation-wrapper-item-button">Beachfront Escapes</div>
+        </div>
+        <div class="vacation-wrapper-item">
+            <img src="img/vacation2.webp" alt="">
+            <div class="vacation-wrapper-item-bg"></div>
+            <div class="vacation-wrapper-item-button">Group Holidays</div>
+        </div>
+        <div class="vacation-wrapper-item">
+            <img src="img/vacation3.jpg" alt="">
+            <div class="vacation-wrapper-item-bg"></div>
+            <div class="vacation-wrapper-item-button">City Breaks</div>
+        </div>
+    </div>
+
+    <div class="main-title">Recent holiday locations</div>
+
+    <div class="holiday-wrapper">
+        <div class="holiday-wrapper-item">
+            <div class="holiday-wrapper-item-images">
+                <img src="img/holiday1.jpg" alt="">
+                <img src="img/holiday1.2.jpg" alt="">
+                <img src="img/holiday1.3.jpg" alt="">
+                <img src="img/holiday1.4.jpg" alt="">
+            </div>
+            <div class="holiday-wrapper-item-descr">
+                <div class="holiday-wrapper-item-descr-title">Thalie 5</div>
+                <div class="holiday-wrapper-item-descr-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptatum vero velit architecto iste dolor nobis aperiam et facilis?</div>
+                <div class="holiday-wrapper-item-descr-amenities">
+                    <div class="holiday-wrapper-item-descr-icon"><i class="fad fa-umbrella-beach"></i> 3</div>
+                    <div class="holiday-wrapper-item-descr-icon"><i class="fad fa-bed"></i> 2</div>
+                    <div class="holiday-wrapper-item-descr-icon"><i class="fad fa-bath"></i></div>
+                </div>
+                <a class="holiday-wrapper-item-descr-button">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="holiday-wrapper-item">
+            <div class="holiday-wrapper-item-images">
+                <img src="img/holiday1.jpg" alt="">
+                <img src="img/holiday1.2.jpg" alt="">
+                <img src="img/holiday1.3.jpg" alt="">
+                <img src="img/holiday1.4.jpg" alt="">
+            </div>
+            <div class="holiday-wrapper-item-descr">
+                <div class="holiday-wrapper-item-descr-title">Thalie 5</div>
+                <div class="holiday-wrapper-item-descr-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptatum vero velit architecto iste dolor nobis aperiam et facilis?</div>
+                <div class="holiday-wrapper-item-descr-amenities">
+                    <div class="holiday-wrapper-item-descr-icon"><i class="fad fa-umbrella-beach"></i> 3</div>
+                </div>
+                <a class="holiday-wrapper-item-descr-button">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="holiday-wrapper-item">
+            <div class="holiday-wrapper-item-images">
+                <img src="img/holiday1.jpg" alt="">
+                <img src="img/holiday1.2.jpg" alt="">
+                <img src="img/holiday1.3.jpg" alt="">
+                <img src="img/holiday1.4.jpg" alt="">
+            </div>
+            <div class="holiday-wrapper-item-descr">
+                <div class="holiday-wrapper-item-descr-title">Thalie 5</div>
+                <div class="holiday-wrapper-item-descr-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptatum vero velit architecto iste dolor nobis aperiam et facilis?</div>
+                <div class="holiday-wrapper-item-descr-amenities">
+                    <div class="holiday-wrapper-item-descr-icon"><i class="fad fa-umbrella-beach"></i> 3</div>
+                </div>
+                <a class="holiday-wrapper-item-descr-button">BOOK NOW</a>
+            </div>
+        </div>
+        <div class="holiday-wrapper-item">
+            <div class="holiday-wrapper-item-images">
+                <img src="img/holiday1.jpg" alt="">
+                <img src="img/holiday1.2.jpg" alt="">
+                <img src="img/holiday1.3.jpg" alt="">
+                <img src="img/holiday1.4.jpg" alt="">
+            </div>
+            <div class="holiday-wrapper-item-descr">
+                <div class="holiday-wrapper-item-descr-title">Thalie 5</div>
+                <div class="holiday-wrapper-item-descr-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam qui voluptatum vero velit architecto iste dolor nobis aperiam et facilis?</div>
+                <div class="holiday-wrapper-item-descr-amenities">
+                    <div class="holiday-wrapper-item-descr-icon"><i class="fad fa-umbrella-beach"></i> 3</div>
+                </div>
+                <a class="holiday-wrapper-item-descr-button">BOOK NOW</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-title">Why we are different</div>
+
+    <div class="different-wrapper">
+        <div class="different-wrapper-item">
+            <div class="different-wrapper-item-logo"></div>
+            <div class="different-wrapper-item-title">Tailor-Maid Packages</div>
+            <div class="different-wrapper-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam libero nesciunt molestiae explicabo totam, consectetur accusamus alias harum necessitatibus aspernatur?
+            </div>
+        </div>
+        <div class="different-wrapper-item">
+            <div class="different-wrapper-item-logo"></div>
+            <div class="different-wrapper-item-title">Tailor-Maid Packages</div>
+            <div class="different-wrapper-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam libero nesciunt molestiae explicabo totam, consectetur accusamus alias harum necessitatibus aspernatur?
+            </div>
+        </div>
+        <div class="different-wrapper-item">
+            <div class="different-wrapper-item-logo"></div>
+            <div class="different-wrapper-item-title">Tailor-Maid Packages</div>
+            <div class="different-wrapper-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam libero nesciunt molestiae explicabo totam, consectetur accusamus alias harum necessitatibus aspernatur?
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <img class="contact-bg-img" src="img/contact-bg.jpg" alt="">
+        <div class="contact-bg"></div>
+        <div class="contact-form-container">
+            <form action="" class="contact-form">
+                <div class="contact-form-title">Send us message</div>
+                <input class="contact-form-input" type="name" name="name" placeholder="Your name">
+                <input class="contact-form-input" type="email" name="email" placeholder="Email">
+                <textarea class="contact-form-input" type="text" name="text" placeholder="Message"></textarea>
+                <button class="contact-form-button" type="submit">SEND</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-item">2020. All Rights Reserved.</div>
+    </div>
+
+
+</body>
+</html>

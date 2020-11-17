@@ -1,0 +1,49 @@
+.header-bac {
+    position: relative;
+
+    &-title {
+        font-size: 70px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        text-shadow: 1px 1px 1px #373737;
+        transition: .3s font-size;
+    }
+
+    &-img {
+        display: block;
+        height: 70vh;
+        width: 100%;
+        object-fit: cover;
+        transition: .3s height;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-bac {
+        &-img {
+            height: 50vh;
+        }
+
+        &-title {
+            font-size: 50px;
+        }
+    }
+}
+
+@media (max-width: 424px) {
+    .header-bac {
+        &-img {
+            height: 40vh;
+        }
+
+        &-title {
+            font-size: 35px;
+        }
+    }
+}
